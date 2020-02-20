@@ -1,4 +1,7 @@
-### node.js / npm
+# static files
+staticfiles
+
+# node.js / npm
 node_modules
 npm-debug.log
 
