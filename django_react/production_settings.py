@@ -15,7 +15,7 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # Allow all host headers.
 # ALLOWED_HOSTS = ['*']
 # Allow for Heroku
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]']
+ALLOWED_HOSTS = ['exsky.herokuapp.com', 'localhost', '127.0.0.1', '[::1]']
 
 # Turn off DEBUG mode.
 DEBUG = False
