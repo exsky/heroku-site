@@ -25,7 +25,7 @@ SECRET_KEY = '2b^3_ahza_4zg1gej@#k-jhxtrr1szdct$0@3y#25%g$5+$vpl'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['exsky.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'exsky.herokuapp.com']
 
 
 # Application definition
@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+
+    'article',
 ]
 
 MIDDLEWARE = [
