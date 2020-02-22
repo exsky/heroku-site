@@ -1,0 +1,24 @@
+<!-- 繼承自 base.html 模板 -->
+{% extends "base.html" %}
+
+<!-- 繼承標題區塊 -->
+{% block title %}
+    所有文章列表
+{% endblock %}
+
+<!-- 繼承內容區塊 -->
+{% block content %}
+    <!-- 取得文章數量 -->
+    <p>所有文章數量： {{ articles|length }}</p>
+    {% for article in articles %}
+        <!-- 拉出標題，掛上詳細文章的連結 -->
+        <!-- 送出 -->
+        <a href="{% url 'article_detail' article.pk %}">
+            <h3>{{ article.title }}</h3>
+        </a>
+        <!-- truncatechars:<int> (縮略長文) -->
+        <p>{{ article.content|truncatechars:40 }}</p>
+    {% empty %}
+        <p>沒有文章...</p>
+    {% end for %}
+{% endblock %}
