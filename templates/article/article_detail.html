@@ -1,0 +1,20 @@
+<!-- 繼承自 base.html 模板 -->
+{% extends "base.html" %}
+
+<!-- 繼承標題區塊 -->
+{% block title %}
+    {{ article.title }}
+{% endblock %}
+
+<!-- 繼承內容區塊 -->
+{% block content %}
+    <!-- 取得文章數量 -->
+    <h3>{{ article.title }}</h3>
+    <p>發文者： {{ article.author }}</p>
+    <p>發表於： {{ article.created_time|date:"Y-m-d H:i:s" }}</p>
+    <a href="{% url 'articles_with_type' article.article_type.pk %}">
+        <p>文章分類： {{ article.article_type }}</p>
+    </a>
+
+    <p>{{ article.content }}</p>
+{% endblock %}
