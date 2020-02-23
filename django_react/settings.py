@@ -139,4 +139,7 @@ STATICFILES_DIRS = (
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-from .settings_local import *
+try:
+    from .settings_local import *
+except ImportError as e:
+    pass
