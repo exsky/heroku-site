@@ -1,4 +1,4 @@
-from django.shortcuts import render, render_to_response, get_object_or_404
+from django.shortcuts import render, get_object_or_404
 from .models import Article, ArticleType
 
 # Create your views here.
@@ -22,4 +22,4 @@ def articles_with_type(request, article_type_pk):
     # 撈取 article_type 是 pk id 的文章
     context['articles'] = Article.objects.filter(article_type=article_type)
     context['article_type'] = article_type
-    return render(request, 'article/articles_with_type.html', context)
+    return render(request, 'article/article_by_type.html', context)
