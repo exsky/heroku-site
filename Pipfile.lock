@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "cd105bf014f05d9a99cd522cd5fc4bb6b08124c58036598e6f79dc291315eea9"
+            "sha256": "26550033e23441cf6b7c8e24baba1c004ad30c91aadb5705c20a68478983071e"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -28,7 +28,15 @@
                 "sha256:4aeaeb1f573c74835b0686a2b46b85990571159ffc21aa57ecd4d1e1cb334163",
                 "sha256:851785365761ebe4994a921b433062309eb882fedd318e1b0fcecc607ed02da9"
             ],
+            "index": "pypi",
             "version": "==0.5.0"
+        },
+        "dj-static": {
+            "hashes": [
+                "sha256:032ec1c532617922e6e3e956d504a6fb1acce4fc1c7c94612d0fda21828ce8ef"
+            ],
+            "index": "pypi",
+            "version": "==0.0.6"
         },
         "django": {
             "hashes": [
@@ -78,6 +86,7 @@
                 "sha256:ef6df7e14698e79c59c7ee7cf94cd62e5b869db369ed4b1b8f7b729ea825712a",
                 "sha256:f898e5cc0a662a9e12bde6f931263a1bbd350cfb18e1d5336a12927851825bb6"
             ],
+            "index": "pypi",
             "version": "==2.8.4"
         },
         "psycopg2-binary": {
@@ -118,6 +127,14 @@
             "index": "pypi",
             "version": "==2.8.4"
         },
+        "python-dotenv": {
+            "hashes": [
+                "sha256:8429f459fc041237d98c9ff32e1938e7e5535b5ff24388876315a098027c3a57",
+                "sha256:ca9f3debf2262170d6f46571ce4d6ca1add60bb93b69c3a29dcb3d1a00a65c93"
+            ],
+            "index": "pypi",
+            "version": "==0.11.0"
+        },
         "pytz": {
             "hashes": [
                 "sha256:1c557d7d0e871de1f5ccd5833f60fb2550652da6be2693c1e02300743d21500d",
@@ -131,6 +148,12 @@
                 "sha256:7c3dca29c022744e95b547e867cee89f4fce4373f3549ccd8797d8eb52cdb873"
             ],
             "version": "==0.3.0"
+        },
+        "static3": {
+            "hashes": [
+                "sha256:674641c64bc75507af2eb20bef7e7e3593dca993dec6674be108fa15b42f47c8"
+            ],
+            "version": "==0.7.0"
         },
         "whitenoise": {
             "hashes": [
