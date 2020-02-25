@@ -1,3 +1,4 @@
+{% load static %} 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,13 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- 標題區塊 -->
     <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% block header_extends %}{% endblock %}
 </head>
 <body>
-    <div>
-        <!-- 回主頁連結 -->
+    <div class="nav">
+        <!-- 主頁 -->
         <a href="{% url 'home' %}">
-            <h3>HOME</h3>
+            <h3>二坪山小弱砲筆記</h3>
         </a>
+        <!-- 首頁 -->
+        <a href="/">首頁</a>
+        <!-- 所有文章列表 -->
+        <a href="{% url 'article_list' %}">文章列表</a>
     </div>
     <hr>
     {% block content %}{% endblock %}

@@ -11,6 +11,11 @@ djangorestframework = "*"
 gunicorn = "*"
 django-heroku = "*"
 psycopg2-binary = "*"
+dj-database-url = "*"
+dj-static = "*"
+psycopg2 = "*"
+python-dotenv = "*"
+whitenoise = "*"
 
 [requires]
 python_version = "3.8"
