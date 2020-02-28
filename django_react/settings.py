@@ -138,7 +138,7 @@ STATICFILES_DIRS = (
 # https://warehouse.python.org/project/whitenoise/
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
+WHITENOISE_ROOT = os.path.join(BASE_DIR, 'staticfiles', 'root')
 try:
     from .settings_local import *
 except ImportError as e:
