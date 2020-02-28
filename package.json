@@ -1,0 +1,21 @@
+{
+  "name": "exsky.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd frontend && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/exsky/exsky.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/exsky/exsky.github.io/issues"
+  },
+  "homepage": "https://github.com/exsky/exsky.github.io#readme"
+}
