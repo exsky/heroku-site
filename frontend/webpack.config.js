@@ -6,6 +6,8 @@ module.exports = {
   // 檔案起始點從 entry 進入，因為是陣列所以也可以是多個檔案
   entry: [
     './src/index.js',
+    './src/scss/base.scss',
+    './src/scss/home.scss'
   ],
   // output 是放入產生出來的結果的相關參數
   output: {
@@ -33,10 +35,14 @@ module.exports = {
         }
       },
       // CSS
-      // {
-      //   test: /\.css$/i,
-      //   use: ['style-loader', 'css-loader'],
-      // },
+      {
+        test: /\.css$/i,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'style-loader',
+          'css-loader'
+        ],
+      },
       // SCSS
       {
         test: /\.s[ac]ss$/i,

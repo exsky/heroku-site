@@ -1,12 +1,13 @@
 {% load static %} 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW"">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- 標題區塊 -->
     <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'css/base.css' %}"> -->
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
     {% block header_extends %}{% endblock %}
 </head>
 <body>
@@ -22,5 +23,8 @@
     </div>
     <hr>
     {% block content %}{% endblock %}
+
+    <!-- 引入 index_bundle.js -->
+    <script type="text/javascript" src="{% static 'js/bundle.js' %}"></script>
 </body>
 </html>
