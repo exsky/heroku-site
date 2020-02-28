@@ -1,9 +1,6 @@
 # Local env var
 settings_local.py
 
-# static files
-staticfiles
-
 # node.js / npm
 node_modules
 npm-debug.log

@@ -1,0 +1,1 @@
+### Heroku static directory
