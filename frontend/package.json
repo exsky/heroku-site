@@ -6,7 +6,8 @@
   "scripts": {
     "watch": "webpack --mode=development --watch",
     "dev": "webpack --mode=development",
-    "build": "webpack --mode=production"
+    "build": "webpack --mode=production",
+    "heroku-postbuild": "webpack -p"
   },
   "keywords": [],
   "author": "",
