@@ -1,1 +1,0 @@
-../../frontend/dist/index_bundle.js
