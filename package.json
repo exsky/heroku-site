@@ -6,7 +6,6 @@
   "scripts": {
     "start": "npm run build",
     "heroku-prebuild": "echo yes|npm install -D",
-    "heroku-postbuild": "python manage.py collectstatic --noinput",
     "watch": "webpack --mode=development --watch",
     "dev": "webpack --mode=development",
     "build": "webpack --mode=production"
