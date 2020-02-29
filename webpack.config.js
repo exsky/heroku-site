@@ -11,7 +11,7 @@ module.exports = {
   ],
   // output 是放入產生出來的結果的相關參數
   output: {
-    filename: 'index_bundle.js',
+    filename: 'bundle.js',
     path: path.resolve(__dirname, 'static/js'),
     // path: path.resolve(__dirname, 'frontend/dist'),
   },
