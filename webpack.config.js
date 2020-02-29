@@ -12,7 +12,8 @@ module.exports = {
   // output 是放入產生出來的結果的相關參數
   output: {
     filename: 'index_bundle.js',
-    path: path.resolve(__dirname, 'frontend/dist'),
+    path: path.resolve(__dirname, 'static/js'),
+    // path: path.resolve(__dirname, 'frontend/dist'),
   },
   plugins: [
     new MiniCssExtractPlugin({
