@@ -8,8 +8,7 @@
     "heroku-prebuild": "npm install --dev",
     "watch": "webpack --mode=development --watch",
     "dev": "webpack --mode=development",
-    "build": "webpack --mode=production",
-    "heroku-postbuild": "webpack -p"
+    "build": "webpack --mode=production"
   },
   "keywords": [],
   "author": "",
