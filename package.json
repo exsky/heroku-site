@@ -4,7 +4,7 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "start": "npm install && npm run build",
+    "start": "npm run build",
     "watch": "webpack --mode=development --watch",
     "dev": "webpack --mode=development",
     "build": "webpack --mode=production",
