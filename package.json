@@ -5,7 +5,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "start": "npm run build",
-    "heroku-prebuild": "npm install --dev",
+    "heroku-prebuild": "echo yes|npm install -D",
     "watch": "webpack --mode=development --watch",
     "dev": "webpack --mode=development",
     "build": "webpack --mode=production"
