@@ -18,6 +18,7 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].css',
+      path: path.resolve(__dirname, 'static/css'),
       chunkFilename: '[id].css',
       ignoreOrder: false
     }),
