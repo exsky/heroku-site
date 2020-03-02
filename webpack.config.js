@@ -4,20 +4,20 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   // 檔案起始點從 entry 進入，因為是陣列所以也可以是多個檔案
-  entry: [
-    './frontend/src/index.js',
-    './frontend/src/scss/base.scss',
-    './frontend/src/scss/home.scss'
-  ],
+  entry: {
+    bundle: './frontend/src/index.js',
+    base: './frontend/src/scss/base.scss',
+    home: './frontend/src/scss/home.scss'
+  },
   // output 是放入產生出來的結果的相關參數
   output: {
-    filename: 'bundle.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'static/js'),
     // path: path.resolve(__dirname, 'frontend/dist'),
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name].css',
+      filename: '../css/[name].css',
       path: path.resolve(__dirname, 'static/css'),
       chunkFilename: '[id].css',
       ignoreOrder: false

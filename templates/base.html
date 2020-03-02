@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- 標題區塊 -->
     <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% block header_extends %}{% endblock %}
 </head>
 <body>
@@ -25,5 +25,7 @@
 
     <!-- 引入 index_bundle.js -->
     <script type="text/javascript" src="{% static 'js/bundle.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/base.js' %}"></script>
+    
 </body>
 </html>
