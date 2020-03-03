@@ -4,19 +4,24 @@
 }
 
 div.nav {
-    background-color: rgb(245, 237, 165);
+    background-color: rgb(0, 0, 0);
+    opacity: 0.8;
     // border-bottom: 2px solid rgb(77, 59, 231);
-    padding: 5px 20px;
+    padding: 20px 20px;
 
     a {
         text-decoration: none;
-        color: #000;
-        padding: 5px 10px;
+        color: rgb(189, 189, 189);
+        padding: 2px 2px 2px 5px;
+        letter-spacing: 0.1em;
 
         .logo {
             display: inline-block;
             font-size: 120%;
         }
     }
+}
 
+.home-content {
+    letter-spacing: 0.2em;
 }

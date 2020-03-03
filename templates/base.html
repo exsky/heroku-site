@@ -12,9 +12,7 @@
 <body>
     <div class="nav">
         <!-- 主頁 -->
-        <a href="{% url 'home' %}">
-            <h3>二坪山小弱砲筆記</h3>
-        </a>
+        <a href="{% url 'home' %}">小弱砲筆記</a>
         <!-- 首頁 -->
         <a href="/">首頁</a>
         <!-- 所有文章列表 -->
@@ -22,6 +20,7 @@
     </div>
     <hr>
     {% block content %}{% endblock %}
+    {% block footer %}{% endblock %}
 
     <!-- 引入 index_bundle.js -->
     <script type="text/javascript" src="{% static 'js/bundle.js' %}"></script>
