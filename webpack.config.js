@@ -53,6 +53,21 @@ module.exports = {
           'css-loader',
           'sass-loader'
         ]
+      },
+      // Background picture
+      {
+        test: /\.(jpe?g|png|gif|svg)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 40000,  /* 小於 4000kB 的圖片轉成 base64 */
+              outputPath: '../image/',
+              name: '[name].[ext]'
+            }
+          },
+          'image-webpack-loader'
+        ]
       }
     ]
   },
