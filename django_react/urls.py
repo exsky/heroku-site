@@ -21,4 +21,5 @@ urlpatterns = [
     path('', index, name='home'),    # 幫這條網址取名字 home，便可在樣板中重複使用
     path('admin/', admin.site.urls),
     path('article/', include('article.urls')),
+    path('blog/', include('article.urls')),
 ]

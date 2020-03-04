@@ -1,3 +1,5 @@
+// @import '/node_modules/bootstrap/dist/css/bootstrap.min.css';
+
 * {
     margin: 0;
     padding: 0;
@@ -24,4 +26,13 @@ div.nav {
 
 .home-content {
     letter-spacing: 0.2em;
+}
+
+footer {
+    background-color: rgb(38, 182, 226);
+    text-align: center;
+    color: black;
+    font-size: 120%;
+    // opacity: 0.5;
+    padding: 20px 20px;
 }

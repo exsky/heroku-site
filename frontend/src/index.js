@@ -1,3 +1,9 @@
-console.log('hello ~')
+var $ = require('jquery');
+window.$ = $;
+require('bootstrap');
 
-import 'bootstrap';
+$('#test-btn').click(
+    function(){
+        console.log('HIT!!');
+    }
+);

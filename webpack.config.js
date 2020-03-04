@@ -1,6 +1,9 @@
+var webpack = require('webpack');
+
 const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   // 檔案起始點從 entry 進入，因為是陣列所以也可以是多個檔案
@@ -22,6 +25,16 @@ module.exports = {
       chunkFilename: '[id].css',
       ignoreOrder: false
     }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
+    }),
+    new CopyPlugin([
+      {
+        from: "./frontend/src/image/favicon.ico",
+        to: "../image/favicon.ico",
+      },
+    ])
   ],
   module: {
     rules: [
@@ -56,7 +69,7 @@ module.exports = {
       },
       // Background picture
       {
-        test: /\.(jpe?g|png|gif|svg)$/,
+        test: /\.(jpe?g|png|gif|svg|ico)$/,
         use: [
           {
             loader: 'url-loader',
