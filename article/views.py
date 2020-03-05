@@ -3,7 +3,10 @@ from .models import Article, ArticleType
 
 # Create your views here.
 def index(request):
-    return render(request, 'home.html')
+    context = {}
+    context['articles'] = Article.objects.all() \
+                            .order_by('created_time').reverse()
+    return render(request, 'blog/index.html', context)
 
 def article_list(request):
     context = {}

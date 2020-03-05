@@ -17,7 +17,7 @@
         <a href="{% url 'blog' %}">Blog</a>
         <!-- <a href="{% url 'article_list' %}">文章列表</a> -->
     </div>
-    <!-- <hr> -->
+    {% block sidebar %}{% endblock %}
     {% block content %}{% endblock %}
     {% block footer %}{% endblock %}
 
