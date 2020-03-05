@@ -1,28 +1,24 @@
 {% load static %}
 <div id="sidebar" class="sidenav">
-    <!-- <a id="close-sidebar-btn" class="closebtn">&times;</a> -->
+    <a id="close-sidebar-btn" class="closebtn"><i class="fas fa-angle-double-left"></i></a>
     <ul class="list-unstyled components">
         <!-- <p>Dummy Heading</p> -->
         <li>
-            <a href="/">首頁 Home</a>
+            <a href="/"><i class="fas fa-home"></i> Home</a>
         </li>
-        <!-- <li>
-            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">文章分類 Article by class</a>
-            <ul class="collapse list-unstyled" id="pageSubmenu">
-                <li>
-                    <a href="#">Page 1</a>
-                </li>
-                <li>
-                    <a href="#">Page 2</a>
-                </li>
-                <li>
-                    <a href="#">Page 3</a>
-                </li>
-            </ul>
-        </li> -->
         <li>
-            <a href="https://github.com/exsky/">Github</a>
+            <a href="https://github.com/exsky/"><i class="fab fa-github"></i> Github</a>
+        </li>
+        <li>
+            <a href="#articleType" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                <i class="fas fa-newspaper"></i> Articles
+            </a>
+            <ul class="collapse list-unstyled" id="articleType">
+                {% for tp_num, tp_name in all_types.items %}
+                <li><a class="subtype" href="type/{{ tp_num }}">{{ tp_name }}</a></li>
+                {% endfor %}
+            </ul>
         </li>
     </ul>
 </div>
-<span id="sidebar-icon"><i class="fa fa-th-list"></i></span>
+<span id="sidebar-icon"><i class="fas fa-angle-double-right"></i></span>

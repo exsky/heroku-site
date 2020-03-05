@@ -1,15 +1,15 @@
 /* Set the width of the side navigation to 250px */
 function openNav() {
-    document.getElementById("sidebar").style.width = "250px";
-    document.getElementById("sidebar").style.display = "block";
-    document.getElementById("content").style.marginLeft = "250px";
+    $("#sidebar").css("width", "18%");
+    $("#sidebar").css("display", "block");
+    $("#content").css("margin-left", "22%");
 }
 
 /* Set the width of the side navigation to 0 */
 function closeNav() {
-    document.getElementById("sidebar").style.width = "0";
-    document.getElementById("sidebar").style.display = "none";
-    document.getElementById("content").style.marginLeft = "0";
+    $("#sidebar").css("width", "0");
+    $("#sidebar").css("display", "none");
+    $("#content").css("margin-left", "4%");
 }
 
 // A $( document ).ready() block.

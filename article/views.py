@@ -1,3 +1,4 @@
+from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404
 from .models import Article, ArticleType
 
@@ -6,6 +7,7 @@ def index(request):
     context = {}
     context['articles'] = Article.objects.all() \
                             .order_by('created_time').reverse()
+    context.update(get_article_types())
     return render(request, 'blog/index.html', context)
 
 def article_list(request):
@@ -29,3 +31,17 @@ def articles_with_type(request, article_type_pk):
     context['articles'] = Article.objects.filter(article_type=article_type)
     context['article_type'] = article_type
     return render(request, 'article/article_by_type.html', context)
+
+def article_types(request):
+    context = get_article_types()
+    return render(request, 'blog/sidebar.html', context)
+
+def get_article_types():
+    context = {}
+    queryset = ArticleType.objects.values_list('id', 'type_name')
+    num_type_map = {}
+    # num_type_map[n] = 'xxx'
+    for a in queryset:
+        num_type_map[a[0]] = a[1]
+    context['all_types'] = num_type_map
+    return context

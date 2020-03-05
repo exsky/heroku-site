@@ -3,22 +3,20 @@ div.nav {
     opacity: 0.8;
     // border-bottom: 2px solid rgb(77, 59, 231);
     padding: 20px 20px;
+    font-weight: bold;
 
     a {
         text-decoration: none;
-        color: rgb(189, 189, 189);
+        color: rgb(248, 237, 140);
         padding: 2px 2px 2px 5px;
         letter-spacing: 0.1em;
-
-        .logo {
-            display: inline-block;
-            font-size: 120%;
-        }
+        
     }
-}
 
-#content {
-    margin-left: 3em;
+    .logo {
+        display: inline-block;
+        font-size: 150%;
+    }
 }
 
 .home-content {
