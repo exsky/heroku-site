@@ -2,6 +2,9 @@ from django.shortcuts import render, get_object_or_404
 from .models import Article, ArticleType
 
 # Create your views here.
+def index(request):
+    return render(request, 'home.html')
+
 def article_list(request):
     context = {}
     context['articles'] = Article.objects.all()

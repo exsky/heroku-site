@@ -13,7 +13,6 @@ django-heroku = "*"
 psycopg2-binary = "*"
 dj-database-url = "*"
 dj-static = "*"
-psycopg2 = "*"
 python-dotenv = "*"
 whitenoise = "*"
 

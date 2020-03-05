@@ -1,26 +1,32 @@
 {% load static %} 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 <head>
+    <link rel="shortcut icon" href="{% static 'image/favicon.ico' %}" />
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <!-- 標題區塊 -->
     <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'rest_framework/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% block header_extends %}{% endblock %}
 </head>
 <body>
     <div class="nav">
-        <!-- 主頁 -->
-        <a href="{% url 'home' %}">
-            <h3>二坪山小弱砲筆記</h3>
-        </a>
-        <!-- 首頁 -->
-        <a href="/">首頁</a>
-        <!-- 所有文章列表 -->
-        <a href="{% url 'article_list' %}">文章列表</a>
+        <a href="{% url 'home' %}">小弱砲筆記</a>
+        <a href="{% url 'blog' %}">Blog</a>
+        <!-- <a href="{% url 'article_list' %}">文章列表</a> -->
     </div>
-    <hr>
+    <!-- <hr> -->
     {% block content %}{% endblock %}
+    {% block footer %}{% endblock %}
+
+    <footer class="footer navbar-fixed-bottom">
+        <small>&copy; Copyright 2020, ShangKuang Yang / exsky</small>
+    </footer>
+    <!-- 引入 index_bundle.js -->
+    <script type="text/javascript" src="{% static 'js/bundle.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/base.js' %}"></script>
+    
 </body>
 </html>

@@ -1,0 +1,24 @@
+// 背景底圖
+body {
+    background-image: url('../image/bg1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+// 網站名稱
+h3.home-content {
+    font-size: 360%;
+    color: white;
+    text-align: center; /*內容置中*/
+    position: absolute; /*絕對位置*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: white;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 15px;
+    padding: 30px 30px; /*內距*/
+}
