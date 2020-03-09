@@ -11,28 +11,74 @@
 <link rel="stylesheet" href="{% static 'css/sidebar.css' %}">
 {% endblock %}
 
+{% block topbar %}
+<div class="container">
+    <div id="menu-btn">
+        <button type="button" class="btn btn-info pull-right">
+            <i class="fas fa-bars"></i> MENU
+        </button>
+    </div>
+</div>
+{% endblock %}
+
 {% block sidebar %}
-{% include 'blog/sidebar.html' %}
+<!-- sidebar -->
+<div id="sidebar" class="sidenav col-md-3 ">
+    <!-- <a id="close-sidebar-btn" class="closebtn"><i class="fas fa-angle-double-left"></i></a> -->
+    <ul class="list-group">
+        <!-- <p>Dummy Heading</p> -->
+        <li class="list-group-item">
+            <button type="button" class="btn btn-primary-outline border border-success">
+                <a href="/"><i class="fas fa-home"></i> Home</a>
+            </button>
+        </li>
+        <li class="list-group-item">
+            <button type="button" class="btn btn-primary-outline border border-success">
+                <a href="https://github.com/exsky/"><i class="fab fa-github"></i> Github</a>
+            </button>
+        </li>
+        <li class="list-group-item">
+            <button type="button" class="btn btn-primary-outline border border-success">
+                <a href="#articleType" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <i class="fas fa-newspaper"></i> Articles
+                </a>
+            </button>
+            
+            <ul class="collapse list-group" id="articleType">
+                {% for tp_num, tp_name in all_types.items %}
+                <li class="list-group-item">
+                    <button type="button" class="btn btn-primary-outline border border-success">
+                        <a class="subtype" href="type/{{ tp_num }}">{{ tp_name }}</a>
+                    </button>
+                </li>
+                {% endfor %}
+            </ul>
+        </li>
+    </ul>
+</div>
+<!-- <span id="sidebar-icon"><i class="fas fa-angle-double-right"></i></span> -->
 <script type="text/javascript" src="{% static 'js/blog.js' %}"></script>
 {% endblock %}
 
 <!-- 繼承內容區塊 -->
 {% block content %}
-<div id="content">
+<div id="content" class="well col-md-6">
     <!-- 取得文章數量 -->
     {% for article in articles %}
-        <div class="article-block">
-            <!-- 拉出標題，掛上詳細文章的連結 -->
-            <!-- 送出 -->
+        <div class="jumbotron">
             <a href="{% url 'single_article' article.pk %}">
-                <h3>{{ article.title }}</h3>
+                <h3 class="display-2">{{ article.title }}</h1>
             </a>
-            <!-- truncatechars:<int> (縮略長文) -->
-            <p>{{ article.content|truncatechars:40 }}</p>
             <sub> written by {{ article.author }} at {{ article.created_time|date:"Y / M / d H:i" }}</sub>
-            <hr>
+            <hr class="my-2">
+            <!-- truncatechars:<int> (縮略長文) -->
+            <p class="lead">
+                {{ article.content|truncatechars:30 }}
+            </p>
+            <!-- <p class="lead">
+                <a class="btn btn-primary btn-lg" href="{% url 'single_article' article.pk %}" role="button">more</a>
+            </p> -->
         </div>
-        
     {% empty %}
         <p>沒有文章...</p>
     {% endfor %}
