@@ -1,40 +1,25 @@
-<!-- 繼承自 base.html 模板 -->
-{% extends "base.html" %}
-{% load static %}
+{% extends "blog/index.html" %}
 
-<!-- 繼承標題區塊 -->
 {% block title %}
-    SKY's Blog
-{% endblock %}
-
-{% block header_extends %}
-<link rel="stylesheet" href="{% static 'css/sidebar.css' %}">
-{% endblock %}
-
-{% block sidebar %}
-{% include 'blog/sidebar.html' %}
-<script type="text/javascript" src="{% static 'js/blog.js' %}"></script>
+{{ article.title }}
 {% endblock %}
 
 <!-- 繼承內容區塊 -->
 {% block content %}
-<div id="content">
+<div id="content" class="well col-md-6">
+    
     <!-- 取得文章數量 -->
-    {% for article in articles %}
-        <div class="article-block">
-            <!-- 拉出標題，掛上詳細文章的連結 -->
-            <!-- 送出 -->
-            <a href="{% url 'single_article' article.pk %}">
-                <h3>{{ article.title }}</h3>
-            </a>
-            <!-- truncatechars:<int> (縮略長文) -->
-            <p>{{ article.content|truncatechars:40 }}</p>
-            <sub> written by {{ article.author }} at {{ article.created_time|date:"Y / M / d H:i" }}</sub>
-            <hr>
-        </div>
-        
-    {% empty %}
-        <p>沒有文章...</p>
-    {% endfor %}
+    <h3>{{ article.title }}</h3>
+    <h5>{{ article.created_time|date:"Y-m-d H:i:s" }} written by {{ article.author }}</h5>
+    
+    <h5>
+        <a href="{% url 'article_by_type' article.article_type.pk %}">
+            {{ article.article_type }}
+        </a>
+    </h5>
+    <pre>
+{{ article.content }}
+    </pre>
+    
 </div>
 {% endblock %}
