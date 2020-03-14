@@ -23,31 +23,8 @@
 
 {% block sidebar %}
 <!-- sidebar -->
-<div id="sidebar" class="sidenav col-md-3 ">
-    <ul class="list-group">
-        <li class="list-group-item">
-            <a href="/"><i class="fas fa-home"></i> Home</a>
-        </li>
-        <li class="list-group-item">
-            <a href="https://github.com/exsky/"><i class="fab fa-github"></i> Github</a>
-        </li>
-        <li class="list-group-item">
-            <a href="#articleType" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                <i class="fas fa-newspaper"></i> Articles
-            </a>
-            
-            <ul class="collapse list-group" id="articleType">
-                {% for tp_num, tp_name in all_types.items %}
-                <li class="list-group-item">
-                    <a class="subtype" href="type/{{ tp_num }}">{{ tp_name }}</a>
-                </li>
-                {% endfor %}
-            </ul>
-        </li>
-    </ul>
-</div>
-<!-- <span id="sidebar-icon"><i class="fas fa-angle-double-right"></i></span> -->
-<script type="text/javascript" src="{% static 'js/blog.js' %}"></script>
+{% include 'blog/sidebar.html' %}
+<!-- end of sidebar -->
 {% endblock %}
 
 <!-- 繼承內容區塊 -->
@@ -73,4 +50,7 @@
         <p>沒有文章...</p>
     {% endfor %}
 </div>
+
+<!-- blog js -->
+<script type="text/javascript" src="{% static 'js/blog.js' %}"></script>
 {% endblock %}
