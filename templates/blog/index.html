@@ -24,32 +24,22 @@
 {% block sidebar %}
 <!-- sidebar -->
 <div id="sidebar" class="sidenav col-md-3 ">
-    <!-- <a id="close-sidebar-btn" class="closebtn"><i class="fas fa-angle-double-left"></i></a> -->
     <ul class="list-group">
-        <!-- <p>Dummy Heading</p> -->
         <li class="list-group-item">
-            <button type="button" class="btn btn-primary-outline border border-success">
-                <a href="/"><i class="fas fa-home"></i> Home</a>
-            </button>
+            <a href="/"><i class="fas fa-home"></i> Home</a>
         </li>
         <li class="list-group-item">
-            <button type="button" class="btn btn-primary-outline border border-success">
-                <a href="https://github.com/exsky/"><i class="fab fa-github"></i> Github</a>
-            </button>
+            <a href="https://github.com/exsky/"><i class="fab fa-github"></i> Github</a>
         </li>
         <li class="list-group-item">
-            <button type="button" class="btn btn-primary-outline border border-success">
-                <a href="#articleType" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                    <i class="fas fa-newspaper"></i> Articles
-                </a>
-            </button>
+            <a href="#articleType" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                <i class="fas fa-newspaper"></i> Articles
+            </a>
             
             <ul class="collapse list-group" id="articleType">
                 {% for tp_num, tp_name in all_types.items %}
                 <li class="list-group-item">
-                    <button type="button" class="btn btn-primary-outline border border-success">
-                        <a class="subtype" href="type/{{ tp_num }}">{{ tp_name }}</a>
-                    </button>
+                    <a class="subtype" href="type/{{ tp_num }}">{{ tp_name }}</a>
                 </li>
                 {% endfor %}
             </ul>
