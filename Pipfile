@@ -15,7 +15,6 @@ dj-database-url = "*"
 dj-static = "*"
 python-dotenv = "*"
 whitenoise = "*"
-minimist = "*"
 
 [requires]
 python_version = "3.8"
