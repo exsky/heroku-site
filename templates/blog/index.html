@@ -1,0 +1,56 @@
+<!-- 繼承自 base.html 模板 -->
+{% extends "base.html" %}
+{% load static %}
+
+<!-- 繼承標題區塊 -->
+{% block title %}
+    弱砲 Blog
+{% endblock %}
+
+{% block header_extends %}
+<link rel="stylesheet" href="{% static 'css/sidebar.css' %}">
+{% endblock %}
+
+{% block topbar %}
+<div class="container">
+    <div id="menu-btn">
+        <button type="button" class="btn btn-info pull-right">
+            <i class="fas fa-bars"></i> MENU
+        </button>
+    </div>
+</div>
+{% endblock %}
+
+{% block sidebar %}
+<!-- sidebar -->
+{% include 'blog/sidebar.html' %}
+<!-- end of sidebar -->
+{% endblock %}
+
+<!-- 繼承內容區塊 -->
+{% block content %}
+<div id="content" class="well col-md-6">
+    <!-- 取得文章數量 -->
+    {% for article in articles %}
+        <div class="jumbotron">
+            <a href="{% url 'single_article' article.pk %}">
+                <h3 class="display-2">{{ article.title }}</h1>
+            </a>
+            <sub> written by {{ article.author }} at {{ article.created_time|date:"Y / M / d H:i" }}</sub>
+            <hr class="my-2">
+            <!-- truncatechars:<int> (縮略長文) -->
+            <p class="lead">
+                {{ article.content|truncatechars:30 }}
+            </p>
+            <!-- <p class="lead">
+                <a class="btn btn-primary btn-lg" href="{% url 'single_article' article.pk %}" role="button">more</a>
+            </p> -->
+        </div>
+    {% empty %}
+        <p>沒有文章...</p>
+    {% endfor %}
+</div>
+
+<!-- blog js -->
+<script type="text/javascript" src="{% static 'js/blog.js' %}"></script>
+{% endblock %}

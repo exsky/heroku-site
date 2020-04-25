@@ -1,0 +1,65 @@
+// /* The side navigation menu */
+// .sidenav {
+//   height: 100%;
+//   width: 18%;
+//   display: block;
+//   position: fixed; /* Stay in place */
+//   // z-index: 1; /* Stay on top */
+//   // top: 0; /* Stay at the top */
+//   left: 0;
+//   background-color: rgb(124, 124, 124); /* Black*/
+//   overflow-x: hidden; /* Disable horizontal scroll */
+//   padding-top: 60px; /* Place content 60px from the top */
+//   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+
+//   /* The navigation menu links */
+//   a {
+//     padding: 8px 8px 8px 32px;
+//     text-decoration: none;
+//     font-size: 133%;
+//     color: #f1d9f0; /* 側欄連結顏色 */
+//     display: block;
+//     transition: 0.3s;
+//   }
+
+//   .subtype {
+//     color: rgb(152, 248, 176);
+//     font-size: 100%;
+//   }
+
+//   /* When you mouse over the navigation links, change their color */
+//   a:hover {
+//     color: #ffdcdc; /* 側欄連結滑鼠經過顏色 */
+//   }
+
+//   /* Position and style the close button (top right corner) */
+//   .closebtn {
+//     position: absolute;
+//     top: 0;
+//     right: 25px;
+//     font-size: 36px;
+//     margin-left: 50px;
+//   }
+// }
+
+// #content {
+//   margin-left: 22%;
+// }
+
+// #sidebar-icon {
+//   background-color: #4CAF50;
+//   border: none;
+//   color: white;
+//   padding: 20px;
+//   text-align: center;
+//   text-decoration: none;
+//   display: inline-block;
+//   font-size: 16px;
+//   margin: 4px 2px;
+// }
+
+// /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+// @media screen and (max-height: 450px) {
+//   .sidenav {padding-top: 15px;}
+//   .sidenav a {font-size: 18px;}
+// }

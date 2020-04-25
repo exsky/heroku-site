@@ -16,10 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from article.views import article_list, index
+from .views import home
 
 urlpatterns = [
-    path('', index, name='home'),    # 幫這條網址取名字 home，便可在樣板中重複使用
+    path('', home, name='home'),    # 幫這條網址取名字 home，便可在樣板中重複使用
     path('admin/', admin.site.urls),
-    path('article/', include('article.urls')),
+    # path('article/', include('article.urls')),
     path('blog/', include('article.urls')),
 ]

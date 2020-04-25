@@ -9,8 +9,10 @@ module.exports = {
   // 檔案起始點從 entry 進入，因為是陣列所以也可以是多個檔案
   entry: {
     bundle: './frontend/src/index.js',
+    blog: './frontend/src/js/blog.js',
     base: './frontend/src/scss/base.scss',
-    home: './frontend/src/scss/home.scss'
+    home: './frontend/src/scss/home.scss',
+    sidebar: './frontend/src/scss/sidebar.scss'
   },
   // output 是放入產生出來的結果的相關參數
   output: {

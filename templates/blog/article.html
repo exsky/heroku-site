@@ -1,0 +1,27 @@
+{% extends "blog/index.html" %}
+
+{% block title %}
+{{ article.title }}
+{% endblock %}
+
+<!-- 繼承內容區塊 -->
+{% block content %}
+<div id="content" class="well col-md-6">
+    
+    <!-- 取得文章數量 -->
+    <h3>{{ article.title }}</h3>
+    <h5>{{ article.created_time|date:"Y-m-d H:i:s" }} written by {{ article.author }}</h5>
+    
+    <h5>
+        <a href="{% url 'article_by_type' article.article_type.pk %}">
+            {{ article.article_type }}
+        </a>
+    </h5>
+    <pre>
+{{ article.content }}
+    </pre>
+    <button type="button" class="btn btn-danger" onclick="history.back()">
+        <i class="fas fa-arrow-left"></i> Back
+    </button>
+</div>
+{% endblock %}
